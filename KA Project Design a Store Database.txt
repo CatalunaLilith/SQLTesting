@@ -1,0 +1,19 @@
+CREATE TABLE yarns(id INTEGER PRIMARY KEY, yarn_name TEXT, fiber TEXT, yarn_weight INTEGER,  skein_weight_grams INTEGER, color TEXT, machine_washable TEXT, price NUMERIC);
+
+INSERT INTO yarns VALUES (1, "winter glow", "wool", 4, 200, "blue/purple/navy", "NO",21.00 );
+INSERT INTO yarns VALUES (2, "party deluxe", "polyester", 3, 50, "green", "YES", 9.46);
+INSERT INTO yarns VALUES (3, "twister summer", "cotton", 2, 250, "beach volleyball", "YES",29.00);
+INSERT INTO yarns VALUES (4, "dahlia", "cotton", 2, 200, "deep impact", "YES",15.80);
+INSERT INTO yarns VALUES (5,"havana", "cotton acrylic", 3, 250, "anemone", "YES",30.00);
+INSERT INTO yarns VALUES (6,"tweed dreams", "acrylic", 3, 50, "golden spices", "YES",2.75);
+INSERT INTO yarns VALUES (7, "cosy", "cotton acrylic", 3, 50, "blue", "YES",5.30);
+INSERT INTO yarns VALUES (8,"tweed delight", "wool", 4, 50, "dijon", "NO",4.70);
+INSERT INTO yarns VALUES (9,"manarola", "acrylic", 3, 100, "waterfront", "YES",7.00);
+INSERT INTO yarns VALUES (10,"moonwalk", "wool", 1, 100, "performance", "YES",8.00);
+INSERT INTO yarns VALUES (11, "metalicco", "polyamide", 4, 50, "golden sand", "NO",4.99);
+INSERT INTO yarns VALUES (12,"rainbow cotton 8/4", "cotton", 1, 50, "grass melange", "YES",1.95);
+INSERT INTO yarns VALUES (13,"rainbow cotton 8/8", "cotton", 2, 50,"curry", "YES",2.05);
+INSERT INTO yarns VALUES (14, "baby snuggle solid", "polyester", 7, 100, "aquamarine", "YES",7.49); 
+INSERT INTO yarns VALUES (15,"dream color", "wool", 1, 100, "provence", "NO", 9.60);
+
+SELECT MAX(skein_weight_grams) FROM yarns
