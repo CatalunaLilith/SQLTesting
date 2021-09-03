@@ -18,6 +18,7 @@ book_publisher = Table(
     Column("publisher_id", Integer, ForeignKey("publisher.publisher_id")),
 )
 
+
 class Author(Base):
     __tablename__ = "author"
     author_id = Column(Integer, primary_key=True)
@@ -28,6 +29,7 @@ class Author(Base):
         "Publisher", secondary=author_publisher, back_populates="authors"
     )
 
+
 class Book(Base):
     __tablename__ = "book"
     book_id = Column(Integer, primary_key=True)
@@ -36,6 +38,7 @@ class Book(Base):
     publishers = relationship(
         "Publisher", secondary=book_publisher, back_populates="books"
     )
+
 
 class Publisher(Base):
     __tablename__ = "publisher"
@@ -47,3 +50,5 @@ class Publisher(Base):
     books = relationship(
         "Book", secondary=book_publisher, back_populates="publishers"
     )
+
+# Spyder Github integrstion test
